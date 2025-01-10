@@ -29,12 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        {/* <ThemeProvider
+        <ThemeProvider
+          enableSystem={true}
           attribute="class"
           defaultTheme="system"
-          enableSystem
           disableTransitionOnChange
         >
           <SidebarProvider>
@@ -42,11 +42,8 @@ export default function RootLayout({
             <main>
               <SidebarTrigger />
               {children}
-              </main>
-              </SidebarProvider>
-              </ThemeProvider> */}
-        <ThemeProvider enableSystem={true} attribute="class">
-          {children}
+            </main>
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -5,13 +5,23 @@ import { useTheme } from "next-themes";
 
 export default function HomePage() {
   const { theme, setTheme } = useTheme();
-
   return (
     <div>
-      <p>Current theme: {theme}</p>
-      <Button onClick={() => setTheme("light")}>Light Mode</Button> <br />
-      <Button onClick={() => setTheme("dark")}>Dark Mode</Button> <br />
-      <Button onClick={() => setTheme("system")}>System Mode</Button> <br />
+      <p>{theme}</p>
+      <Button
+        onClick={() => setTheme("dark")}
+        variant={"default"}
+        className="text-foreground"
+      >
+        Dark
+      </Button>
+      <Button
+        onClick={() => setTheme("light")}
+        variant={"default"}
+        className="text-foreground"
+      >
+        Light{" "}
+      </Button>
     </div>
   );
 }
