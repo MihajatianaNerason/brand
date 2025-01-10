@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
@@ -42,8 +42,11 @@ export default function RootLayout({
             <main>
               <SidebarTrigger />
               {children}
-            </main>
-          </SidebarProvider>
+              </main>
+              </SidebarProvider>
+              </ThemeProvider> */}
+        <ThemeProvider enableSystem={true} attribute="class">
+          {children}
         </ThemeProvider>
       </body>
     </html>
