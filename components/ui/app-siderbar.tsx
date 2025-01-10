@@ -1,4 +1,4 @@
-import { CaseSensitive, Home, MoonStar, Palette } from "lucide-react";
+import { CaseSensitive, Home, Palette } from "lucide-react";
 
 import {
   Sidebar,
@@ -13,11 +13,6 @@ import {
 
 // Menu items.
 const items = [
-  {
-    title: "Dark Mode",
-    url: "/",
-    icon: MoonStar,
-  },
   {
     title: "Home",
     url: "/",
